@@ -152,6 +152,9 @@ h3 {
     font-size: var(--font-size-medium-1);
     vertical-align: middle;
     margin-bottom: var(--gutter-small);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .date-small{
