@@ -415,6 +415,28 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-normal);
 }
 
+.project-header {
+    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), var(--header-image);
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: var(--font-size-normal);
+}
+
+
+.project--header__text {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center; /* Vertical centering */
+    height: 200px;
+}
+
+
+
 .header__text {
     position: absolute;
     top: 50%;
@@ -555,7 +577,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- gallery ----- */
+/* ----- Gallery ----- */
 /* --------------------------------------- */
 
 .gallery__logos {
@@ -581,10 +603,49 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- About ----- */
+/* ----- Portfolio Slides ----- */
 /* --------------------------------------- */
 
-.about__content {
+
+
+
+/* Container for horizontal scrolling */
+
+
+.port-slider {
+    max-width: 1200px; /* comfortable reading width */
+    margin: 0 auto; /* centers the whole block horizontally */
+    display: flex;
+    flex-direction: column; /* stacks images vertically */
+    align-items: center; /* centers each image inside the column */
+    gap: 1.5rem; /* space between images */
+}
+
+/* Each image */
+.port-page {
+    max-width: 150%; /* scales down to fit container */
+    height: auto; /* keeps aspect ratio */
+    display: block; /* removes extra inline spacing */
+}
+
+
+    /* Optional: on larger screens, limit max width */
+@media (min-width: 1200px) {
+    .port-page {
+        max-width: 800px; /* comfortable reading width */
+    }
+
+    .port-slider-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+    /* --------------------------------------- */
+    /* ----- About ----- */
+    /* --------------------------------------- */
+
+    .about__content {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
