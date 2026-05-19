@@ -461,7 +461,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .project__text {
-    flex: 0 0 30%;
+    flex: auto;
 }
 
 .project__list {
@@ -487,7 +487,7 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(min-width: 901px) {
     .project__image-box {
-        flex: 1;
+        flex: atuo;
         margin: 0 0 0 10rem;
     }
 }
@@ -513,7 +513,7 @@ body:not(.user-is-tabbing) a:focus {
     max-width: 18rem;
 }
 
-@media(max-width: 1240px) {
+@media(max-width: 120rem) {
     .gallery__logos {
         overflow-x: scroll;
         padding: var(--gutter-normal);
