@@ -470,6 +470,11 @@ body:not(.user-is-tabbing) a:focus {
     margin-bottom: var(--gutter-normal);
 }
 
+.icon__code {
+height: 3rem;
+width: auto;
+}
+
 .project__code {
     display: block;
     height: 3rem;
