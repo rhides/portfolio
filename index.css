@@ -506,12 +506,12 @@ body:not(.user-is-tabbing) a:focus {
 .soc-icon {
     display: inline-block; /* keeps icon inline with text */
     line-height: 1; /* removes extra height below image */
-    gap: 0.5rem;
+    gap: 1.5rem;
     text-decoration: none;
 }
 
  .soc-icon__img {
-    width: 4rem; /* or any size you prefer */
+    width: 4.5rem; /* or any size you prefer */
     height: auto; /* maintains aspect ratio */
     vertical-align: middle; /* aligns with surrounding text */
     display: inline-block; /* ensures proper box model */
