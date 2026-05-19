@@ -500,7 +500,31 @@ body:not(.user-is-tabbing) a:focus {
     transform: scale(1.02);
 }
 
-.project__code {
+
+
+
+.soc-icon {
+    display: inline-block; /* keeps icon inline with text */
+    line-height: 1; /* removes extra height below image */
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+ .soc-icon__img {
+    width: 4rem; /* or any size you prefer */
+    height: auto; /* maintains aspect ratio */
+    vertical-align: middle; /* aligns with surrounding text */
+    display: inline-block; /* ensures proper box model */
+    transition: opacity 0.2s ease;
+}
+
+.soc-icon:hover .soc-icon__img {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+
+    .project__code {
     display: block;
     height: 3rem;
     margin-left: var(--gutter-normal);
