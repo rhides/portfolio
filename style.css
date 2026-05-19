@@ -517,6 +517,7 @@ body:not(.user-is-tabbing) a:focus {
     display: inline-block; /* ensures proper box model */
     transition: opacity 0.2s ease;
     gap: 1.5rem;
+    margin-left: 2rem;
 }
 
 .soc-icon:hover .soc-icon__img {
