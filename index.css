@@ -166,15 +166,8 @@ h3::before {
 h3 {
     font-size: var(--font-size-medium-1);
     margin-bottom: var(--gutter-small);
-    justify-content: center;
 }
 
-h4 {
-    width: auto;
-    height: 4rem;
-    justify-content: center;
-    
- }
 
 @media(max-width: 500px) {
     .heading-primary {
@@ -187,7 +180,6 @@ h4 {
 
     h3 {
         font-size: var(--font-size-medium); 
-        justify-content: center;
     }
 }
 
