@@ -150,7 +150,7 @@ h2 {
 
 h3 {
     font-size: var(--font-size-medium-1);
-    vertical-align: center;
+    vertical-align: middle;
     margin-bottom: var(--gutter-small);
 }
 
@@ -476,11 +476,25 @@ body:not(.user-is-tabbing) a:focus {
     margin-bottom: var(--gutter-normal);
 }
 
-.icon__code {
-    height: 4rem;
-    width: auto;
-    vertical-align: middle;
-    display: inline-block;
+.icon-btn {
+    display: inline-block; /* keeps icon inline with text */
+    line-height: 1; /* removes extra height below image */
+    text-decoration: none; /* removes any underline (never hurts) */
+}
+
+/* The SVG image itself */
+.icon-btn__img {
+    width: 5rem; /* or any size you prefer */
+    height: auto; /* maintains aspect ratio */
+    vertical-align: middle; /* aligns with surrounding text */
+    display: inline-block; /* ensures proper box model */
+    transition: opacity 0.2s ease;
+}
+
+/* Optional hover effect for the button */
+.icon-btn:hover .icon-btn__img {
+    opacity: 0.8;
+    transform: scale(1.02);
 }
 
 .project__code {
@@ -500,7 +514,7 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(min-width: 901px) {
     .project__image-box {
-        flex: atuo;
+        flex: auto;
         margin: 0 0 0 10rem;
     }
 }
