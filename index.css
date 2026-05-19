@@ -158,9 +158,13 @@ h2::after {
 
 }
 
+
+h3::before {
+    margin-top: 3rem; /* Adds a clear gap after each paragraph */
+}
+
 h3 {
     font-size: var(--font-size-medium-1);
-    margin-top: 1.5rem; /* Adds a clear gap after each paragraph */
     margin-bottom: var(--gutter-small);
     justify-content: center;
 }
