@@ -153,6 +153,10 @@ h3 {
     margin-bottom: var(--gutter-small);
 }
 
+.date-small{
+    font-size: 0.5rem;
+}
+
 @media(max-width: 500px) {
     .heading-primary {
         font-size: var(--font-size-large);
@@ -471,8 +475,10 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .icon__code {
-height: 3rem;
-width: auto;
+    height: 4rem;
+    width: auto;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .project__code {
