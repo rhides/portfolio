@@ -3,9 +3,9 @@
 
 <svg
    fill="#ffffff"
-   width="800"
-   height="800"
-   viewBox="0 0 32 32"
+   width="900"
+   height="900"
+   viewBox="0 0 36 36"
    version="1.1"
    stroke="#ffffff"
    id="svg9"
@@ -29,9 +29,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="true"
      showgrid="false"
-     inkscape:zoom="1.04"
-     inkscape:cx="399.51923"
-     inkscape:cy="476.44231"
+     inkscape:zoom="0.52"
+     inkscape:cx="-85.576923"
+     inkscape:cy="527.88462"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -46,7 +46,8 @@
      stroke-linecap="round"
      stroke-linejoin="round" />
   <g
-     id="SVGRepo_iconCarrier">
+     id="SVGRepo_iconCarrier"
+     transform="translate(2.013181,2.0015)">
     <title
        id="title4">steam</title>
     <path
