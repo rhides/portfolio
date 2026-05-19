@@ -1,5 +1,5 @@
 /* --------------------------------------- */
-/* ----- Basic Setup ----- */
+/* ----- Bassic Setup ----- */
 /* --------------------------------------- */
 
 @font-face {
@@ -71,6 +71,13 @@ body {
     background: var(--black);
     overflow-x: hidden;
 }
+
+svg {
+    width: auto;
+    height: 2.5rem;
+    justify-content: center;
+}
+
 
 .row {
     max-width: var(--container-max-width);
@@ -153,6 +160,7 @@ h2::after {
 h3 {
     font-size: var(--font-size-medium-1);
     margin-bottom: var(--gutter-small);
+    justify-content: center;
 }
 
 @media(max-width: 500px) {
@@ -165,7 +173,8 @@ h3 {
     }
 
     h3 {
-        font-size: var(--font-size-medium);
+        font-size: var(--font-size-medium); 
+        justify-content: center;
     }
 }
 
