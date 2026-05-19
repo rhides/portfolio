@@ -510,12 +510,13 @@ body:not(.user-is-tabbing) a:focus {
     text-decoration: none;
 }
 
- .soc-icon__img {
+.soc-icon__img {
     width: 4.5rem; /* or any size you prefer */
     height: auto; /* maintains aspect ratio */
     vertical-align: middle; /* aligns with surrounding text */
     display: inline-block; /* ensures proper box model */
     transition: opacity 0.2s ease;
+    gap: 1.5rem;
 }
 
 .soc-icon:hover .soc-icon__img {
