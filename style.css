@@ -19,7 +19,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    list-style: none;
+    box-sizing:inherit;
 }
 
 :root {
@@ -407,7 +408,7 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), url('./images/header.jpg');
+    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), url('./images/header.png');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -459,6 +460,43 @@ body:not(.user-is-tabbing) a:focus {
         transform: scale(.8);
     }
 }
+
+
+/* --------------------------------------- */
+/* ----- Page Banner (sub-pages) ----- */
+/* --------------------------------------- */
+
+.page-banner {
+    padding: var(--gutter-huge) 0 var(--gutter-medium);
+    border-bottom: var(--border-light);
+    background: var(--black);
+}
+
+    .page-banner h1 {
+        font-family: 'Jost', sans-serif;
+        font-size: var(--font-size-large);
+        font-weight: 400;
+        line-height: var(--line-height-small);
+        color: var(--white);
+    }
+
+        .page-banner h1::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 10rem;
+            background: var(--orange);
+            margin: var(--gutter-small) 0;
+        }
+
+    .page-banner p {
+        font-family: 'Jost', sans-serif;
+        font-size: var(--font-size-normal);
+        color: var(--white-1);
+        max-width: var(--container-medium-width);
+    }
+
+
 
 /* --------------------------------------- */
 /* ----- project ----- */
@@ -528,7 +566,7 @@ body:not(.user-is-tabbing) a:focus {
 .soc-icon {
     display: inline-block; /* keeps icon inline with text */
     line-height: 1; /* removes extra height below image */
-    gap: 1.5rem;
+    gap: 0.5rem;
     text-decoration: none;
 }
 
@@ -538,8 +576,8 @@ body:not(.user-is-tabbing) a:focus {
     vertical-align: middle; /* aligns with surrounding text */
     display: inline-block; /* ensures proper box model */
     transition: opacity 0.2s ease;
-    gap: 1.5rem;
-    margin-left: 2rem;
+    gap: 0.5rem;
+    margin-left: 0.25rem;
 }
 
 .soc-icon:hover .soc-icon__img {
@@ -577,36 +615,132 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+
 /* --------------------------------------- */
 /* ----- Gallery ----- */
 /* --------------------------------------- */
-
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    
+    margin: 0 calc(-1 * var(--gutter-small-1) / 2);
 }
 
 .gallery-item {
-    margin: 5px;
-    border: 1px solid #ccc;
+    position: relative;
+    margin: calc(var(--gutter-small-1) / 2);
     width: 37rem;
+    background: var(--black);
+    border: var(--border-light);
+    transition: all 0.3s cubic-bezier(1, 0.68, 0.16, 0.9);
+    overflow: hidden;
 }
 
-.gallery-item:hover {
-    border: 1px solid #777;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-}
-
-.gallery-item div.desc {
-        padding: 15px;
-        text-align: center;
+    .gallery-item:hover {
+        border-color: var(--orange);
     }
+
+    .gallery-item a {
+        display: block;
+        text-decoration: none;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.4s cubic-bezier(1, 0.68, 0.16, 0.9), opacity 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.04);
+        opacity: 0.85;
+    }
+
+    .gallery-item div.desc {
+        padding: var(--gutter-small);
+        text-align: center;
+        border-top: var(--border-light);
+        font-family: 'Jost', sans-serif;
+        font-size: var(--font-size-normal);
+        color: var(--white);
+        transition: color 0.2s ease, border-color 0.3s ease;
+    }
+
+    .gallery-item:hover div.desc {
+        color: var(--orange);
+        border-top-color: var(--orange);
+    }
+
+.desc__title {
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-small);
+    color: var(--white);
+    margin-bottom: 0.4rem;
+    transition: color 0.2s ease;
+}
+
+.gallery-item:hover .desc__title {
+    color: var(--orange);
+}
+
+.desc__meta {
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-small);
+    color: var(--white-1);
+    opacity: 0.7;
+    letter-spacing: 0.02em;
+}
+
+
+    /* Orange sweep underline along bottom of card — matches .btn / .nav__link */
+    .gallery-item::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        height: 2px;
+        background: var(--orange);
+        transition: all 0.3s cubic-bezier(1, 0.68, 0.16, 0.9);
+    }
+
+    .gallery-item:hover::after {
+        right: 0;
+    }
+
+/* Responsive */
+@media(max-width: 900px) {
+    .gallery-item {
+        width: calc(50% - var(--gutter-small-1));
+    }
+}
+
+@media(max-width: 600px) {
+    .gallery {
+        margin: 0;
+    }
+
+    .gallery-item {
+        width: 100%;
+        margin: 0 0 var(--gutter-small) 0;
+    }
+}
+
+/* Give the gallery section a bit of breathing room below the grid */
+.gallery-section .project__links {
+    margin-top: var(--gutter-medium);
+}
+
+/* --------------------------------------- */
+/* ----- Portfolio Album Gallery ----- */
+/* --------------------------------------- */
+
+
+
 
 /* --------------------------------------- */
 /* ----- Portfolio Slides ----- */

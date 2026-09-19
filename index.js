@@ -41,3 +41,24 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+document.querySelectorAll('[data-panel]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+        const panel = document.getElementById(trigger.dataset.panel);
+        if (!panel) return;
+        panel.hidden = false;
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+document.querySelectorAll('.artwork-panel').forEach(panel => {
+    const close = () => {
+        panel.hidden = true;
+        document.body.style.overflow = '';
+    };
+    panel.querySelector('.artwork-panel__close').addEventListener('click', close);
+    panel.addEventListener('click', e => { if (e.target === panel) close(); });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && !panel.hidden) close();
+    });
+});
